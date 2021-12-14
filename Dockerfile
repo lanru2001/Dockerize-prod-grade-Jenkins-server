@@ -1,3 +1,4 @@
+# Define your base image as jenkins/jenkins:lts and remember to restart the container to start all the plugins from plugin manager cli
 FROM jenkins/jenkins:lts
 MAINTAINER azeez.olanrewaju@sysnetgs.com
 USER root
@@ -49,7 +50,7 @@ RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #Install gradle 
-#ENV GRADLE_VERSION=6.5.1
+#ENV GRADLE_VERSION=7.0
 
 #RUN wget https://services.gradle.org/distributions/gradle-${VERSION}-bin.zip -P /tmp
 #RUN unzip -d /opt/gradle /tmp/gradle-${VERSION}-bin.zip
