@@ -45,7 +45,7 @@ RUN echo  java -version
 
 #Set Oracle Java8 as the default Java
 #RUN update-java-alternatives -s java-8-oracle
-RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc   
+RUN echo "export JAVA_HOME=/opt/java/openjdk/bin/java" >> ~/.bashrc   
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
